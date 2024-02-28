@@ -1,0 +1,619 @@
+:root {
+    --white-color: #fff;
+    --primary-color: #2a2c33;
+    --input-icon-color: #737373;
+    --dark-color: #202020;
+    --dark-lighter-color: #262626;
+    --blue-color: #07f;
+    --red-color: #ff4d4d;
+    --orange-color: #ffedcc;
+    --input-border-color: #ECEFF9;
+    --input-hover-color: #F7F9FC;
+    --light-grey-color: #cccfdb;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+    border: 1px dotted red; */
+}
+
+html {
+    font-size: 65.5%;
+    font-family: 'Josefin Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    /* background: url('http://portal2.tmu.ac.in/images/TMU1-img.jpg') center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background: #f5f5f5;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.dark {
+    background: #121212;
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.dark iframe,
+.dark img,
+.dark html {
+    filter: invert(1) hue-rotate(180deg) brightness(104%) contrast(104%);
+}
+
+
+
+h1 {
+    font-size: 3.8rem;
+    line-height: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+    line-height: 4rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.hide,
+.hide-lg {
+    display: none !important;
+}
+
+.cursor,
+.cursor-lg {
+    cursor: pointer;
+}
+
+.responsive-img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.cursor-lg {
+    cursor: pointer;
+}
+
+.glow {
+    background: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.w-0 {
+    width: 0 !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.shadow {
+    background: var(--white-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#menuCollapse,
+#toggleTheme svg {
+    color: var(--primary-color);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 75%;
+    float: right;
+    padding: 1rem 0;
+    z-index: 99;
+    transition: width 0.5s ease;
+}
+
+.nav {
+    height: 100%;
+    width: 95%;
+    padding: .6rem 2.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 16px;
+}
+
+.menu-toggle {
+    line-height: 1.9;
+    margin: auto;
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+    border: none;
+}
+
+.menu-toggle svg {
+    vertical-align: middle;
+    margin-bottom: .3rem;
+}
+
+
+.user-profile {
+    height: 4.3rem;
+    width: 4.3rem;
+    border-radius: 50%;
+    background: url("/WhatsApp\ Image\ 2024-01-30\ at\ 11.35.58_4296a229.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--light-grey-color);
+}
+
+.user-profile:hover {
+    outline: 3px solid var(--blue-color);
+}
+
+#dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    min-width: 23rem;
+    margin-top: 2rem;
+    padding: 2rem 1.5rem;
+    border-radius: 18px;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    font-weight: 600;
+    overflow: auto;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--primary-color);
+    padding: 1.2rem 1.6rem;
+    text-decoration: none;
+    border-radius: 7px;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: var(--orange-color);
+}
+
+.tabs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 25%;
+    border-radius: 0 25px 25px 0;
+    padding: 0 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    overflow-x: scroll;
+    scrollbar-track-color: none;
+    scroll-behavior: smooth;
+    transition: display 0.5s ease;
+}
+
+.tabs .menu-toggle {
+    position: sticky;
+    width: 100%;
+    top: 20px;
+    margin-bottom: 5rem;
+}
+
+.tabs ul {
+    /* margin-top: 3rem; */
+    list-style-type: none;
+    text-align: left;
+}
+
+.tabs .active {
+    background: var(--orange-color);
+}
+
+.tabs li {
+    cursor: pointer;
+    display: block;
+    margin: 2rem auto;
+    width: 100%;
+    line-height: 2.9;
+    padding: 0 2rem;
+    border-radius: 9px;
+}
+
+.tabs .accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.tabs .accordion {
+    margin-left: 1.5rem;
+}
+
+.tabs .accordion a {
+    color: var(--primary-color);
+}
+
+.tabs li:hover {
+    text-decoration: underline;
+    background: var(--orange-color);
+}
+
+.tabs a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.tabs li span {
+    float: right;
+    margin-top: .4rem;
+}
+
+.tabs li span.left {
+    float: left;
+    margin-right: 1.5rem;
+}
+
+
+.tabs .disbaled {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+
+.tabs .disbaled:hover {
+    background: none;
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    padding: 1rem 0;
+    overflow-x: scroll;
+}
+
+main .container-fluid {
+    height: 100%;
+    width: 75%;
+    float: right;
+    padding: .6rem 2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+
+main .box img {
+    border-radius: 50%;
+    outline: 4.5px solid var(--blue-color);
+}
+
+main .box {
+    flex-direction: column !important;
+    padding: 4rem 3rem !important;
+}
+
+.page-container,
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+    color: var(--primary-color);
+    width: 100%;
+}
+
+.page-container {
+    align-items: start;
+    transition: margin-left 0.5s ease;
+}
+
+.box {
+    background: var(--white-color);
+    padding: 3rem 5.5rem 3rem .5rem;
+    margin: 1rem 0;
+    border-radius: 18px;
+    font-size: 1.4rem;
+    flex-direction: row;
+    font-weight: 600;
+}
+
+.box img {
+    max-width: 100%;
+    max-height: 26rem;
+    height: auto;
+}
+
+.heading {
+    color: var(--primary-color);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile-card .input-group {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.profile-card .input-labels {
+    padding: 1.5rem 0;
+    margin-bottom: 0 !important;
+    width: 50%;
+}
+
+
+.profile-card .input-wrapper {
+    width: 50%;
+}
+
+.input-labels {
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline;
+}
+
+.input-labels a {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    float: right;
+}
+
+.border-0 {
+    border: none;
+    box-shadow: none !important;
+}
+
+main .input-wrapper {
+    padding-right: 1rem;
+}
+
+.input-wrapper {
+    display: flex;
+    width: 100%;
+    height: 4.3rem;
+    border: 1px solid var(--input-border-color);
+    box-shadow: 0 1px 2px var(--input-border-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    outline: none;
+    padding-left: 1.8rem;
+    align-items: center;
+    transition: .2s;
+    background: var(--white-color);
+    cursor: text;
+}
+
+.input-wrapper:focus-within {
+    border: 2px solid var(--blue-color);
+    background: var(--white-color);
+}
+
+.input-wrapper:hover {
+    background: var(--input-hover-color);
+}
+
+.input-field {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+}
+
+.input-group button {
+    width: 100%;
+    max-width: 36rem;
+    height: 4.3rem;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+    transition: .2s;
+    background: var(--dark-color);
+    color: var(--white-color);
+}
+
+.input-group button:hover {
+    background: var(--dark-lighter-color);
+}
+
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 73.5%;
+
+    }
+
+    .hide-lg {
+        display: block !important;
+    }
+
+    .hide-md {
+        display: none !important;
+    }
+
+    .nav {
+        padding: .8rem 1.5rem;
+    }
+
+    .col-md-12,
+    .tabs,
+    .container-fluid,
+    header {
+        width: 100% !important;
+    }
+
+    .cursor-lg {
+        cursor: none;
+    }
+
+    .tabs {
+        top: 0;
+        z-index: 999;
+    }
+
+    .tabs li {
+        cursor: none;
+    }
+
+    .container-fluid {
+        float: none !important;
+        padding: 0 .5rem !important;
+    }
+    .box {
+        padding: 3rem 1.7rem;
+        margin: 1.5rem 0;
+        flex-direction: column;
+    }
+
+    .box img {
+        max-height: 20rem;
+    }
+
+}

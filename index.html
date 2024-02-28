@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav shadow">
+            <a href="#!" class="hide-md" id="menuCollapse"></a>
+            <img src="tmu-logo.png" alt="Logo" class="cursor" height="50" width="50">
+            <button class="hide-lg menu-toggle">Menu
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 9l6 6l6 -6" />
+                </svg>
+            </button>
+            <div class="dropdown">
+                <button id="dropbtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hide-md" width="27" height="27" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+                        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hide-lg" width="25" height="25" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M19 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M19 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    </svg>
+                </button>
+                <div id="myDropdown" class="dropdown-content hide shadow ">
+                    <a href="#!" id="toggleTheme">Toggle Theme</a>
+                    <a href="#!">Change Password</a>
+                    <a href="#!">Help</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="tabs shadow hide-md">
+            <button class="hide-lg menu-toggle">Menu
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 15l6 -6l6 6" />
+                </svg>
+            </button>
+            <ul>
+                <li class="disbaled hide-md"><a href="#!">Menu</a></li>
+                <li class="active">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z" />
+                            <path d="M10 16h6" />
+                            <path d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M4 8h3" />
+                            <path d="M4 12h3" />
+                            <path d="M4 16h3" />
+                        </svg>
+                    </span>
+                    <a href="">Profile</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                            <path d="M7 15v2" />
+                            <path d="M10 11v6" />
+                            <path d="M13 13v4" />
+                        </svg>
+                    </span>
+                    <a href="">Attendance</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                            <path d="M15 8h-6h1a3 3 0 0 1 0 6h-1l3 3" />
+                            <path d="M9 11h6" />
+                        </svg>
+                    </span>
+                    <a href="">Fees</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                            <path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                            <path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                            <path d="M14 7l6 0" />
+                            <path d="M17 4l0 6" />
+                        </svg>
+                    </span>
+                    <a href="">Time Table</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                            <path d="M16 3l0 4" />
+                            <path d="M8 3l0 4" />
+                            <path d="M4 11l16 0" />
+                            <path d="M8 15h2v2h-2z" />
+                        </svg>
+                    </span>
+                    <a href="">Events</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                            <path d="M7 3v4h4" />
+                            <path d="M9 17l0 4" />
+                            <path d="M17 14l0 7" />
+                            <path d="M13 13l0 8" />
+                            <path d="M21 12l0 9" />
+                        </svg>
+                    </span>
+                    <a href="">Assignments</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M13 12v.01" />
+                            <path d="M3 21h18" />
+                            <path d="M5 21v-16a2 2 0 0 1 2 -2h7.5m2.5 10.5v7.5" />
+                            <path d="M14 7h7m-3 -3l3 3l-3 3" />
+                        </svg>
+                    </span><a href="">Grievances</a>
+                </li>
+                <li class="accordion-toggle">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M20 17v-12c0 -1.121 -.879 -2 -2 -2s-2 .879 -2 2v12l2 2l2 -2z" />
+                            <path d="M16 7h4" />
+                            <path d="M18 19h-13a2 2 0 1 1 0 -4h4a2 2 0 1 0 0 -4h-3" />
+                        </svg>
+                    </span>
+                    <a href="#!">Examination</a>
+                </li>
+                <div class="accordion-panel hide">
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="#!">Internal Datesheet</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">External Datesheet</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Form Main</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Form Reappear</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Form Status</a>
+                    </li>
+                </div>
+                <li class="accordion-toggle">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M17.8 19.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+                            <path
+                                d="M6.2 19.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+                            <path
+                                d="M12 9.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+                        </svg>
+                    </span>
+                    <a href="#!">Faculty</a>
+                </li>
+                <div class="accordion-panel hide">
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Current</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Sat. Survey</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Syllabus Feedback</a>
+                    </li>
+                </div>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                            <path d="M9 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M15 8l2 0" />
+                            <path d="M15 12l2 0" />
+                            <path d="M7 16l10 0" />
+                        </svg>
+                    </span>
+                    <a href="">Admit Card</a>
+                </li>
+                <li class="accordion-toggle">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                            <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                            <path d="M9 17v-4" />
+                            <path d="M12 17v-1" />
+                            <path d="M15 17v-2" />
+                            <path d="M12 17v-1" />
+                        </svg>
+                    </span>
+                    <a href="#!">Result</a>
+                </li>
+                <div class="accordion-panel hide">
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Internal Result</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Online Result</a>
+                    </li>
+                </div>
+                <li class="accordion-toggle">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" />
+                            <path d="M9 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" />
+                            <path d="M5 8h4" />
+                            <path d="M9 16h4" />
+                            <path
+                                d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041z" />
+                            <path d="M14 9l4 -1" />
+                            <path d="M16 16l3.923 -.98" />
+                        </svg>
+                    </span>
+                    <a href="#!">Library</a>
+                </li>
+                <div class="accordion-panel hide">
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Library Login</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Remote Access</a>
+                    </li>
+                </div>
+                <li class="accordion-toggle">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 9m-6 0a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" />
+                            <path d="M12 15l3.4 5.89l1.598 -3.233l3.598 .232l-3.4 -5.889" />
+                            <path d="M6.802 12l-3.4 5.89l3.598 -.233l1.598 3.232l3.4 -5.889" />
+                        </svg>
+                    </span>
+                    <a href="#!">Placement</a>
+                </li>
+                <div class="accordion-panel hide">
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">CRC Form</a>
+                    </li>
+                </div>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                            <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                            <path d="M5 21h14" />
+                            <path d="M5 18h14" />
+                            <path d="M5 15h14" />
+                        </svg>
+                    </span>
+                    <a href="">Registration</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-md-12">
+                    <div class="box profile-card">
+                        <img src="WhatsApp Image 2024-01-30 at 11.35.58_4296a229.jpg" alt="" srcset="">
+                        <h3>Amaan Warsi</h3>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-labels">
+                                        <label for="email">Email.</label>
+                                    </div>
+                                    <div class="input-wrapper border-0">
+                                        <input class="input-field" value="itsamaan.warsi@gmail.com" type="email"
+                                            name="email" id="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-labels">
+                                        <label for="mobile">Mobile</label>
+                                    </div>
+                                    <div class="input-wrapper border-0">
+                                        <input class="input-field" value="9837193680" type="number" name="mobile"
+                                            id="mobile">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-labels">
+                                        <label for="city">City</label>
+                                    </div>
+                                    <div class="input-wrapper border-0">
+                                        <input class="input-field" value="Moradabad" type="text" name="city" id="city">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-labels">
+                                        <label for="address">Address</label>
+                                    </div>
+                                    <div class="input-wrapper border-0">
+                                        <input class="input-field" value="Deepty Gunj, Civil lines" type="text"
+                                            name="address" id="name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-12">
+                    <div class="page-container">
+                        <div class="box">
+                            <h3 class="heading text-left">Personal</h3>
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="Userid">Enrollment no.</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="TCA2309023" type="text" name="Userid"
+                                                id="Userid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="stnumber">Student number</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="ST/049107" type="text" name="stnumber"
+                                                id="stnumber">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="ABCid">ABC ID</label>
+                                            <a href="#!">Generate ABC ID</a>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="5503872752855" type="number" name="ABCid"
+                                                id="ABCid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="name">Name</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="Amaan Warsi" type="text" name="name"
+                                                id="name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="DOB">DOB</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="2005-10-12" type="date" name="DOB"
+                                                id="DOB">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="category">Category</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="OBC" type="text" name="category"
+                                                id="category">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="fathername">Father Name</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="Suhail Warsi" type="text"
+                                                name="fathername" id="fathername">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="mothername">Mother Name</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="Anjum Jahan" type="text" name="name"
+                                                id="mothername">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="Mentor">Mentor</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="Priyank Singhal" type="text" name="Mentor"
+                                                id="Mentor">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="course">Course</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="B.Tech-001" type="text" name="course"
+                                                id="course">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="section">Section</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="A" type="text" name="section"
+                                                id="section">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="semester">Semester</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="II" type="text" name="semester"
+                                                id="semester">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="batch">Batch</label>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="input-field" value="" type="text" name="batch" id="batch">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+
+                    <div class="box shadow">
+                        <div class="input-group">
+                            <button name="submit" class="cursor-lg" id="submit">Submit Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script>
+        const accordion = document.querySelectorAll(".accordion-toggle");
+        const menuCollapse = document.querySelector("#menuCollapse");
+        const tabs = document.querySelector(".tabs");
+        const containerFluid = document.querySelector(".container-fluid");
+        const header = document.querySelector("header");
+
+        const downArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M6 9l6 6l6 -6"></path> </svg>`,
+            upArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M6 15l6 -6l6 6"></path> </svg>`
+        // leftArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M19 18v-6a3 3 0 0 0 -3 -3h-7" /> <path d="M13 13l-4 -4l4 -4m-5 8l-4 -4l4 -4" /> </svg>`,
+        // rightArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 18v-6a3 3 0 0 1 3 -3h7" /> <path d="M10 13l4 -4l-4 -4m5 8l4 -4l-4 -4" /> </svg>`;
+
+
+
+
+        document.querySelectorAll(".menu-toggle").forEach((el) => {
+
+            el.onclick = () => {
+                tabs.classList.toggle("hide-md")
+            }
+        })
+        document.querySelector("#toggleTheme").onclick = () => {
+            document.querySelector("body").classList.toggle("dark");
+            const isDarkTheme = document.body.classList.contains('dark');
+            localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+        };
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.body.classList.toggle('dark', savedTheme === 'dark');
+        }
+        accordion.forEach((accordionItem) => {
+            // Create a new span for the accordion icon
+            const iconSpan = document.createElement('span');
+            iconSpan.classList.add('accordion-icon');
+            iconSpan.innerHTML = downArrow;
+
+            // Append the new span to the accordion-toggle
+            accordionItem.querySelector("a").appendChild(iconSpan);
+
+            accordionItem.addEventListener("click", function () {
+                closeOtherPanels(this);
+                var svg = this.querySelector('.accordion-icon');
+
+                if (svg.innerHTML.trim() === downArrow) {
+                    svg.innerHTML = upArrow;
+                } else {
+                    svg.innerHTML = downArrow;
+                }
+
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                panel.classList.toggle("hide");
+                panel.style.maxHeight = panel.classList.contains("hide") ? null : panel.scrollHeight + "px";
+            });
+        });
+
+        const closeOtherPanels = (clickedAccordion) => {
+            accordion.forEach((accordionItem) => {
+                if (accordionItem !== clickedAccordion) {
+                    accordionItem.classList.remove("active");
+                    const panel = accordionItem.nextElementSibling;
+                    panel.classList.add("hide");
+                    panel.style.maxHeight = null;
+                    accordionItem.querySelector('.accordion-icon').innerHTML = downArrow;
+                }
+            });
+        };
+
+        const leftArrowSVG = createArrowSVG("left");
+        const rightArrowSVG = createArrowSVG("right");
+        menuCollapse.appendChild(leftArrowSVG);
+
+        menuCollapse.addEventListener("click", () => {
+
+            tabs.classList.toggle("hide");
+                containerFluid.classList.toggle("w-100");
+                header.classList.toggle("w-100");
+
+                if (menuCollapse.contains(leftArrowSVG)) {
+                    menuCollapse.innerHTML = '';
+                    menuCollapse.appendChild(rightArrowSVG);
+                } else {
+                    menuCollapse.innerHTML = '';
+                    menuCollapse.appendChild(leftArrowSVG);
+                }
+            });
+
+            // Function to create arrow SVG
+            function createArrowSVG(direction) {
+                const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+                svg.setAttribute("width", "27");
+                svg.setAttribute("height", "27");
+                svg.setAttribute("viewBox", "0 0 24 24");
+                svg.setAttribute("stroke-width", "1.5");
+                svg.setAttribute("stroke", "currentColor");
+                svg.setAttribute("fill", "none");
+                svg.setAttribute("stroke-linecap", "round");
+                svg.setAttribute("stroke-linejoin", "round");
+
+                const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path1.setAttribute("stroke", "none");
+                path1.setAttribute("d", "M0 0h24v24H0z");
+                path1.setAttribute("fill", "none");
+
+                const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path2.setAttribute("d", direction === "left" ? "M19 18v-6a3 3 0 0 0 -3 -3h-7" : "M4 18v-6a3 3 0 0 1 3 -3h7");
+
+                const path3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path3.setAttribute("d", direction === "left" ? "M13 13l-4 -4l4 -4m-5 8l-4 -4l4 -4" : "M10 13l4 -4l-4 -4m5 8l4 -4l-4 -4");
+
+
+                svg.appendChild(path1);
+                svg.appendChild(path2);
+                svg.appendChild(path3);
+
+                return svg;
+            }
+
+
+            document.querySelector("#dropbtn").addEventListener("click", (event) => {
+                document.getElementById("myDropdown").classList.toggle("hide");
+                event.stopPropagation();
+            });
+
+
+            window.addEventListener("click", () => {
+                document.getElementById("myDropdown").classList.add("hide");
+            })
+
+    </script>
+</body>
+
+</html>
