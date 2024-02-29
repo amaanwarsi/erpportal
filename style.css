@@ -11,6 +11,7 @@
     --input-border-color: #ECEFF9;
     --input-hover-color: #F7F9FC;
     --light-grey-color: #cccfdb;
+    --menu-bg: #e6e6e6;
 }
 
 .dark {
@@ -22,6 +23,7 @@
     --blue-color: #07f;
     --red-color: #ff4d4d;
     --orange-color: #262626;
+    --menu-bg: var(--orange-color);
     --input-border-color: #222;
     --input-hover-color: #262626;
     --light-grey-color: #cccfdb;
@@ -261,7 +263,7 @@ header {
     font-size: 1.4rem;
     padding: 1rem 3rem;
     border: none;
-    background: var(--theme-color);
+    background: var(--menu-bg);
     color: var(--primary-color);
 }
 
