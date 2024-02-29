@@ -1,5 +1,6 @@
 :root {
-    --white-color: #fff;
+    --box-bg: #fff;
+    --theme-color: #fff;
     --primary-color: #2a2c33;
     --input-icon-color: #737373;
     --dark-color: #202020;
@@ -10,7 +11,21 @@
     --input-border-color: #ECEFF9;
     --input-hover-color: #F7F9FC;
     --light-grey-color: #cccfdb;
+}
 
+.dark {
+    --theme-color: #0d0d0d;
+    --primary-color: #f2f2f2;
+    --input-icon-color: #b3b3b3;
+    --dark-color: #f2f2f2;
+    --dark-lighter-color: #d9d9d9;
+    --blue-color: #07f;
+    --red-color: #ff4d4d;
+    --orange-color: #262626;
+    --input-border-color: #222;
+    --input-hover-color: #262626;
+    --light-grey-color: #cccfdb;
+    --box-bg: #1a1a1a;
 }
 
 * {
@@ -55,16 +70,7 @@ body {
 
 .dark {
     background: #121212;
-    filter: invert(1) hue-rotate(180deg);
 }
-
-.dark iframe,
-.dark img,
-.dark html {
-    filter: invert(1) hue-rotate(180deg) brightness(104%) contrast(104%);
-}
-
-
 
 h1 {
     font-size: 3.8rem;
@@ -212,8 +218,13 @@ h6 {
 }
 
 .shadow {
-    background: var(--white-color);
+    background: var(--theme-color);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+
+svg{
+    color: var(--primary-color);
 }
 
 #menuCollapse,
@@ -369,8 +380,12 @@ header {
 }
 
 .tabs li:hover {
-    text-decoration: underline;
     background: var(--orange-color);
+}
+
+.tabs li:hover{
+    color: var(--theme-color);
+
 }
 
 .tabs a {
@@ -447,7 +462,7 @@ main .box {
 }
 
 .box {
-    background: var(--white-color);
+    background: var(--box-bg);
     padding: 3rem 5.5rem 3rem .5rem;
     margin: 1rem 0;
     border-radius: 18px;
@@ -523,13 +538,13 @@ main .input-wrapper {
     padding-left: 1.8rem;
     align-items: center;
     transition: .2s;
-    background: var(--white-color);
+    background: var(--theme-color);
     cursor: text;
 }
 
 .input-wrapper:focus-within {
     border: 2px solid var(--blue-color);
-    background: var(--white-color);
+    background: var(--theme-color);
 }
 
 .input-wrapper:hover {
@@ -542,6 +557,7 @@ main .input-wrapper {
     outline: none;
     border: none;
     background: none;
+    color: var(--primary-color);
     font-size: 1.3rem;
 }
 
@@ -557,7 +573,7 @@ main .input-wrapper {
     border-radius: 15px;
     transition: .2s;
     background: var(--dark-color);
-    color: var(--white-color);
+    color: var(--theme-color);
 }
 
 .input-group button:hover {
@@ -578,7 +594,13 @@ main .input-wrapper {
         display: none !important;
     }
 
+    /* header{
+        padding: 0;
+    } */
+
     .nav {
+        /* width: 100%;
+        border-radius: 0; */
         padding: .8rem 1.5rem;
     }
 
@@ -594,11 +616,12 @@ main .input-wrapper {
     }
 
     .tabs {
-        top: 0;
         z-index: 999;
     }
 
-    .tabs li {
+    .tabs li,
+    .tabs a,
+    .dropdown-content a {
         cursor: none;
     }
 
@@ -606,6 +629,7 @@ main .input-wrapper {
         float: none !important;
         padding: 0 .5rem !important;
     }
+
     .box {
         padding: 3rem 1.7rem;
         margin: 1.5rem 0;
