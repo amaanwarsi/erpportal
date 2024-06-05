@@ -1,0 +1,322 @@
+:root {
+    --blue: #574AE2;
+    --dark: #1E1E24;
+    --light: #FFF8F0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Maven Pro", sans-serif;
+    background: var(--light);
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+.container {
+    width: 98%;
+    max-width: 1040px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 6.5rem;
+    background-color: #fff;
+    border-bottom: 1px solid #0002;
+    z-index: 9;
+}
+
+.navbar {
+    width: 100%;
+    height: 6.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 4.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.icons {
+    display: flex;
+    gap: 3rem;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 99;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav:not(.hide) {
+    opacity: 1;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+ul {
+    position: relative;
+    font-family: sans-serif;
+}
+
+ul li {
+    list-style: none;
+    text-align: center;
+}
+
+ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 4.8rem;
+    padding: .5rem 2rem;
+    display: inline-flex;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+ul:hover li a {
+    color: #0002;
+}
+
+ul li:hover a {
+    color: #000;
+    background: transparent;
+}
+
+ul li a:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 500px;
+    transition: letter-spacing 0.5s, left 0.5s;
+}
+
+ul li a:hover:before {
+    content: attr(data-text);
+    opacity: 1;
+    left: 50%;
+    letter-spacing: 1rem;
+    width: 180rem;
+    height: 180rem;
+}
+
+ul li:nth-child(6n + 1) a:before {
+    background: #0470fe;
+}
+
+ul li:nth-child(6n + 2) a:before {
+    background: #ff7675;
+}
+
+ul li:nth-child(6n + 3) a:before {
+    background: #1582fe;
+}
+
+ul li:nth-child(6n + 4) a:before {
+    background: #a29bfe;
+}
+
+ul li:nth-child(6n + 5) a:before {
+    background: #fd79a8;
+}
+
+ul li:nth-child(6n + 6) a:before {
+    background: #ffeaa7;
+}
+
+.hero {
+    color: var(--dark);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero .content {
+    width: 48%;
+    height: 50rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 3rem;
+}
+
+.hero img{
+    display: block;
+    align-self: flex-end;
+    max-width: 100%;
+    height: 80%;
+}
+
+.hero .bg{
+    position: absolute;
+    top: 180px;
+    right: 80px;
+    height: 75%;
+    background-color: #ebe9fb;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 4.6rem;
+    font-weight: 900;
+}
+
+.hero p {
+    color: #2e2e38;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: .7px;
+}
+
+
+.cta {
+    position: relative;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #ebe9fb;
+    width: 4.5rem;
+    height: 4.5rem;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--blue);
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 1rem;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--blue);
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #ebe9fb;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
+
+.small-section{
+    height: 12rem;
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about{
+    background-color: var(--blue);
+}
+
+#about *{
+    color: var(--light)!important;
+}

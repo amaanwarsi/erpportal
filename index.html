@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERP Portal - TMU</title>
     <link rel="shortcut icon" href="/tmu-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.min.css">
     <link rel="stylesheet" href="./normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="nav shadow">
-            <a href="#home" class="hide-md" id="menuCollapse"></a>
-            <img src="tmu-logo.png" alt="Logo" class="cursor" height="50" width="50">
+            <img src="/tmu-logo.png" alt="Logo" class="logo cursor" height="50">
             <button class="hide-lg menu-toggle">Menu
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -27,7 +27,9 @@
                 </svg>
             </button>
             <div class="dropdown">
-                <button id="dropbtn">
+                <div class="user-profile" id="dropbtn"
+                    style="background-image: url('/assets/img/christian-buehner-DItYlc26zVI-unsplash.jpg');"></div>
+                <button class="bg-border-none hide">
                     <svg xmlns="http://www.w3.org/2000/svg" class="hide-md" width="27" height="27" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -54,15 +56,14 @@
                 <div id="myDropdown" class="dropdown-content hide shadow ">
                     <a href="#!" id="toggleTheme">Toggle Theme</a>
                     <a href="#!">Change Password</a>
-                    <a href="#!">Help</a>
+                    <a href="#!">Logout</a>
                 </div>
             </div>
         </div>
     </header>
 
     <main id="home">
-
-        <div class="tabs shadow hide-md">
+        <div class="sidebar shadow hide-md">
             <button class="hide-lg menu-toggle">Menu
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -70,8 +71,24 @@
                     <path d="M6 15l6 -6l6 6" />
                 </svg>
             </button>
+            <h3><span class="hide-md half-bg-text">Menu</span></h3>
+            <div class="search-group">
+                <div class="input-group">
+                    <div class="input-wrapper search-input">
+                        <input class="input-field" placeholder="Search..." type="text" id="search-input">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M21 21l-6 -6" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
             <ul>
-                <li class="disbaled hide-md"><a href="#!">Menu</a></li>
                 <li class="active">
                     <span class="left">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
@@ -450,216 +467,219 @@
                 </li>
             </ul>
         </div>
+
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-6 col-md-12">
-                    <div class="box profile-card">
-                        <img src="WhatsApp Image 2024-01-30 at 11.35.58_4296a229.jpg" alt="" srcset="">
-                        <h3>Amaan Warsi</h3>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="input-group">
-                                    <div class="input-labels">
-                                        <label for="email">Email.</label>
-                                    </div>
-                                    <div class="input-wrapper border-0">
-                                        <input class="input-field" value="itsamaan.warsi@gmail.com" type="email"
-                                            name="email" id="email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="input-group">
-                                    <div class="input-labels">
-                                        <label for="mobile">Mobile</label>
-                                    </div>
-                                    <div class="input-wrapper border-0">
-                                        <input class="input-field" value="9837193680" type="number" name="mobile"
-                                            id="mobile">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="input-group">
-                                    <div class="input-labels">
-                                        <label for="city">City</label>
-                                    </div>
-                                    <div class="input-wrapper border-0">
-                                        <input class="input-field" value="Moradabad" type="text" name="city" id="city">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="input-group">
-                                    <div class="input-labels">
-                                        <label for="address">Address</label>
-                                    </div>
-                                    <div class="input-wrapper border-0">
-                                        <input class="input-field" value="Deepty Gunj, Civil lines" type="text"
-                                            name="address" id="name">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-12">
-                    <div class="page-container">
-                        <div class="box">
-                            <h3 class="heading text-left">Personal</h3>
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-6 col-md-12">
+                        <div class="box profile-card">
+                            <img src="assets/img/christian-buehner-DItYlc26zVI-unsplash.jpg" alt="" srcset="">
+                            <h3>John Doe</h3>
                             <div class="row">
-                                <div class="col-6 col-md-12">
+                                <div class="col-12">
                                     <div class="input-group">
                                         <div class="input-labels">
-                                            <label for="Userid">Enrollment no.</label>
+                                            <label for="email">Email.</label>
                                         </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="TCA2309023" type="text" name="Userid"
-                                                id="Userid">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-labels">
-                                            <label for="stnumber">Student number</label>
-                                        </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="ST/049107" type="text" name="stnumber"
-                                                id="stnumber">
+                                        <div class="input-wrapper border-0">
+                                            <input class="input-field" value="johndoe@example.com" type="email"
+                                                name="email" id="email">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-group">
                                         <div class="input-labels">
-                                            <label for="ABCid">ABC ID</label>
-                                            <a href="#!">Generate ABC ID</a>
+                                            <label for="mobile">Mobile</label>
                                         </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="5503872752855" type="number" name="ABCid"
-                                                id="ABCid">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-labels">
-                                            <label for="name">Name</label>
-                                        </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="Amaan Warsi" type="text" name="name"
-                                                id="name">
+                                        <div class="input-wrapper border-0">
+                                            <input class="input-field" value="9876543210" type="number" name="mobile"
+                                                id="mobile">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-12">
+                                <div class="col-12">
                                     <div class="input-group">
                                         <div class="input-labels">
-                                            <label for="DOB">DOB</label>
+                                            <label for="city">City</label>
                                         </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="2050-08-30" type="date" name="DOB"
-                                                id="DOB">
+                                        <div class="input-wrapper border-0">
+                                            <input class="input-field" value="Pune" type="text" name="city" id="city">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-12">
+                                <div class="col-12">
                                     <div class="input-group">
                                         <div class="input-labels">
-                                            <label for="category">Category</label>
+                                            <label for="address">Address</label>
                                         </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="OBC" type="text" name="category"
-                                                id="category">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-labels">
-                                            <label for="fathername">Father Name</label>
-                                        </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="" type="text"
-                                                name="fathername" id="fathername">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-labels">
-                                            <label for="mothername">Mother Name</label>
-                                        </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="" type="text" name="name"
-                                                id="mothername">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-labels">
-                                            <label for="Mentor">Mentor</label>
-                                        </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="" type="text" name="Mentor"
-                                                id="Mentor">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-labels">
-                                            <label for="course">Course</label>
-                                        </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="B.Tech-001" type="text" name="course"
-                                                id="course">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-labels">
-                                            <label for="section">Section</label>
-                                        </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="A" type="text" name="section"
-                                                id="section">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-labels">
-                                            <label for="semester">Semester</label>
-                                        </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="II" type="text" name="semester"
-                                                id="semester">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-labels">
-                                            <label for="batch">Batch</label>
-                                        </div>
-                                        <div class="input-wrapper">
-                                            <input class="input-field" value="" type="text" name="batch" id="batch">
+                                        <div class="input-wrapper border-0">
+                                            <input class="input-field" value="A-103, Civil lines" type="text"
+                                                name="address" id="name">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12">
-
-                    <div class="box shadow">
-                        <div class="input-group">
-                            <button name="submit" class="cursor-lg" id="submit">Submit Details</button>
+                    <div class="col-6 col-md-12">
+                        <div class="page-container">
+                            <div class="box">
+                                <h3 class="heading text-left">Personal</h3>
+                                <div class="row">
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="Userid">Enrollment no.</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="TCA2309023" type="text" name="Userid"
+                                                    id="Userid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="stnumber">Student number</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="ST/######" type="text" name="stnumber"
+                                                    id="stnumber">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="ABCid">ABC ID</label>
+                                                <a href="#!">Generate ABC ID</a>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="5503872752855" type="number"
+                                                    name="ABCid" id="ABCid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="name">Name</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="John Doe" type="text" name="name"
+                                                    id="name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="DOB">DOB</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="2050-08-30" type="date" name="DOB"
+                                                    id="DOB">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="category">Category</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="OBC" type="text" name="category"
+                                                    id="category">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="fathername">Father Name</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="Michael Doe" type="text"
+                                                    name="fathername" id="fathername">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="mothername">Mother Name</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="Catherine Doe" type="text" name="name"
+                                                    id="mothername">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="Mentor">Mentor</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="Omar Ahmed Al-Farsi2023-2024"
+                                                    type="text" name="Mentor" id="Mentor">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="course">Course</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="B.Tech-001" type="text" name="course"
+                                                    id="course">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="section">Section</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="A" type="text" name="section"
+                                                    id="section">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="semester">Semester</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="II" type="text" name="semester"
+                                                    id="semester">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="batch">Batch</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="2023-2024" type="text" name="batch"
+                                                    id="batch">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="box shadow">
+                            <div class="input-group">
+                                <button name="submit" class="cursor-lg" id="submit">Submit Details</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -671,54 +691,87 @@
     </footer>
 
     <script>
-        const accordion = document.querySelectorAll(".accordion-toggle");
-        const menuCollapse = document.querySelector("#menuCollapse");
-        const tabs = document.querySelector(".tabs");
-        const containerFluid = document.querySelector(".container-fluid");
-        const header = document.querySelector("header");
+        // Selecting elements
+        const accordion = document.querySelectorAll(".accordion-toggle"),
+            sidebar = document.querySelector(".sidebar"),
+            containerFluid = document.querySelector(".container-fluid"),
+            header = document.querySelector("header"),
+            resetSearchInput = document.querySelector("#resetField"),
+            searchInput = document.querySelector('#search-input'),
+            resultsContainer = document.getElementById('results'),
+            menuUL = document.querySelector('.sidebar ul'),
+            menuItems = document.querySelectorAll('.sidebar li'),
+            originalMenuItems = Array.from(menuItems);
 
+        // SVG icons
         const downArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M6 9l6 6l6 -6"></path> </svg>`,
-            upArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M6 15l6 -6l6 6"></path> </svg>`
-        // leftArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M19 18v-6a3 3 0 0 0 -3 -3h-7" /> <path d="M13 13l-4 -4l4 -4m-5 8l-4 -4l4 -4" /> </svg>`,
-        // rightArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 18v-6a3 3 0 0 1 3 -3h7" /> <path d="M10 13l4 -4l-4 -4m5 8l4 -4l-4 -4" /> </svg>`;
+            upArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M6 15l6 -6l-6 -6"></path> </svg>`;
 
 
+        const openTab = (evt, tabName) => {
+            const tabContent = document.querySelectorAll(".tab-content");
+            tabContent.forEach(content => {
+                content.style.display = "none";
+            });
+
+            const tabLinks = document.querySelectorAll(".tab-btn");
+            tabLinks.forEach(link => {
+                if (link.classList.contains("active")) {
+                    link.classList.remove("active");
+                }
+            });
+            evt.currentTarget.classList.toggle("active");
+
+            document.getElementById(tabName).style.display = "block";
+        };
 
 
+        // Focus input field on input-group click
+        document.querySelectorAll(".input-group").forEach((element) => {
+            var inputField = element.querySelector(".input-field");
+            element.addEventListener("click", () => {
+                inputField.focus();
+            });
+        });
+
+        // Toggle menu visibility on menu-toggle click
         document.querySelectorAll(".menu-toggle").forEach((el) => {
-
             el.onclick = () => {
-                tabs.classList.toggle("hide-md")
+                sidebar.classList.toggle("hide-md")
             }
         })
+
+        // Toggle dark/light theme
         document.querySelector("#toggleTheme").onclick = () => {
             document.querySelector("body").classList.toggle("dark");
+
             const isDarkTheme = document.body.classList.contains('dark');
             localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
         };
 
+        // Retrieve theme from local storage
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             document.body.classList.toggle('dark', savedTheme === 'dark');
         }
+
+        // Setup accordion functionality
         accordion.forEach((accordionItem) => {
-            // Create a new span for the accordion icon
             const iconSpan = document.createElement('span');
             iconSpan.classList.add('accordion-icon');
             iconSpan.innerHTML = downArrow;
 
-            // Append the new span to the accordion-toggle
             accordionItem.querySelector("a").appendChild(iconSpan);
 
             accordionItem.addEventListener("click", function () {
-                closeOtherPanels(this);
-                var svg = this.querySelector('.accordion-icon');
+                // closeOtherPanels(this);
+                // var svg = this.querySelector('.accordion-icon');
 
-                if (svg.innerHTML.trim() === downArrow) {
-                    svg.innerHTML = upArrow;
-                } else {
-                    svg.innerHTML = downArrow;
-                }
+                // if (svg.innerHTML.trim() === downArrow) {
+                //     svg.innerHTML = upArrow;
+                // } else {
+                //     svg.innerHTML = downArrow;
+                // }
 
                 this.classList.toggle("active");
                 var panel = this.nextElementSibling;
@@ -727,79 +780,116 @@
             });
         });
 
-        const closeOtherPanels = (clickedAccordion) => {
-            accordion.forEach((accordionItem) => {
-                if (accordionItem !== clickedAccordion) {
-                    accordionItem.classList.remove("active");
-                    const panel = accordionItem.nextElementSibling;
-                    panel.classList.add("hide");
-                    panel.style.maxHeight = null;
-                    accordionItem.querySelector('.accordion-icon').innerHTML = downArrow;
-                }
-            });
-        };
+        // Function to close other accordion panels
+        // const closeOtherPanels = (clickedAccordion) => {
+        //     accordion.forEach((accordionItem) => {
+        //         if (accordionItem !== clickedAccordion) {
+        //             accordionItem.classList.remove("active");
+        //             const panel = accordionItem.nextElementSibling;
+        //             panel.classList.add("hide");
+        //             panel.style.maxHeight = null;
+        //             accordionItem.querySelector('.accordion-icon').innerHTML = downArrow;
+        //         }
+        //     });
+        // }
 
-        const leftArrowSVG = createArrowSVG("left");
-        const rightArrowSVG = createArrowSVG("right");
-        menuCollapse.appendChild(leftArrowSVG);
+        // Dropdown menu functionality
+        document.querySelector("#dropbtn").addEventListener("click", (event) => {
+            document.getElementById("myDropdown").classList.toggle("hide");
+            event.stopPropagation();
+        });
 
-        menuCollapse.addEventListener("click", () => {
+        // Hide dropdown menu when clicking outside
+        window.addEventListener("click", () => {
+            document.getElementById("myDropdown").classList.add("hide");
+        })
 
-            tabs.classList.toggle("hide");
-                containerFluid.classList.toggle("w-100");
-                header.classList.toggle("w-100");
+        // Search functionality
+        searchInput.addEventListener('input', function (event) {
+            const query = event.target.value.trim().toLowerCase();
 
-                if (menuCollapse.contains(leftArrowSVG)) {
-                    menuCollapse.innerHTML = '';
-                    menuCollapse.appendChild(rightArrowSVG);
+            menuItems.forEach(function (item) {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = 'block';
                 } else {
-                    menuCollapse.innerHTML = '';
-                    menuCollapse.appendChild(leftArrowSVG);
+                    item.style.display = 'none';
                 }
             });
 
-            // Function to create arrow SVG
-            function createArrowSVG(direction) {
-                const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-                svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-                svg.setAttribute("width", "27");
-                svg.setAttribute("height", "27");
-                svg.setAttribute("viewBox", "0 0 24 24");
-                svg.setAttribute("stroke-width", "1.5");
-                svg.setAttribute("stroke", "currentColor");
-                svg.setAttribute("fill", "none");
-                svg.setAttribute("stroke-linecap", "round");
-                svg.setAttribute("stroke-linejoin", "round");
+            menuUL.innerHTML = '';
 
-                const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                path1.setAttribute("stroke", "none");
-                path1.setAttribute("d", "M0 0h24v24H0z");
-                path1.setAttribute("fill", "none");
+            if (query === '') {
+                originalMenuItems.forEach(function (item) {
+                    menuUL.appendChild(item.cloneNode(true));
+                });
+            } else {
+                menuItems.forEach(function (item) {
+                    if (item.style.display !== 'none') {
+                        var clonedItem = item.cloneNode(true);
+                        var spanElements = clonedItem.querySelectorAll('span');
 
-                const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                path2.setAttribute("d", direction === "left" ? "M19 18v-6a3 3 0 0 0 -3 -3h-7" : "M4 18v-6a3 3 0 0 1 3 -3h7");
-
-                const path3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                path3.setAttribute("d", direction === "left" ? "M13 13l-4 -4l4 -4m-5 8l-4 -4l4 -4" : "M10 13l4 -4l-4 -4m5 8l4 -4l-4 -4");
-
-
-                svg.appendChild(path1);
-                svg.appendChild(path2);
-                svg.appendChild(path3);
-
-                return svg;
+                        spanElements.forEach(function (spanElement) {
+                            spanElement.parentNode.removeChild(spanElement);
+                        });
+                        menuUL.appendChild(clonedItem);
+                    }
+                });
             }
 
+            if (menuUL.children.length > 0) {
+                resultsContainer.style.display = 'block';
+            } else {
+                resultsContainer.style.display = 'none';
+            }
+        });
 
-            document.querySelector("#dropbtn").addEventListener("click", (event) => {
-                document.getElementById("myDropdown").classList.toggle("hide");
-                event.stopPropagation();
+        // Get all select-dropdown elements
+        const selectDropdowns = document.querySelectorAll('.select-dropdown');
+
+        // Loop through each select-dropdown
+        selectDropdowns.forEach((selectDropdown) => {
+            // Get input and list elements within each select-dropdown
+            const input = selectDropdown.querySelector('.select-group .input-field');
+            const list = selectDropdown.querySelector('.list');
+
+            // Add click event listener to select-group
+            selectDropdown.querySelector('.select-group').addEventListener('click', () => {
+                // Toggle 'open' class on input
+                input.classList.toggle('open');
+
+                // Toggle max height and box shadow on list
+                if (list.style.maxHeight) {
+                    list.style.maxHeight = null;
+                    list.style.boxShadow = null;
+                } else {
+                    list.style.maxHeight = list.scrollHeight + 'px';
+                    list.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.15),0 1px 3px 1px rgba(0, 0, 0, 0.1)';
+                }
             });
 
+            // Add change event listener to radio buttons
+            const radios = selectDropdown.querySelectorAll('.radio');
+            radios.forEach((radio) => {
+                radio.addEventListener('change', () => {
+                    // Update input value with selected option
+                    input.value = radio.nextElementSibling.textContent.trim();
+                    // Close the dropdown
+                    input.classList.remove('open');
+                    list.style.maxHeight = null;
+                    list.style.boxShadow = null;
+                });
+            });
 
-            window.addEventListener("click", () => {
-                document.getElementById("myDropdown").classList.add("hide");
-            })
+            // Hide the list when clicked outside
+            document.addEventListener('click', (event) => {
+                if (!selectDropdown.contains(event.target)) {
+                    input.classList.remove('open');
+                    list.style.maxHeight = null;
+                    list.style.boxShadow = null;
+                }
+            });
+        });
 
     </script>
 </body>

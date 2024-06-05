@@ -1,0 +1,236 @@
+<div class="container-fluid">
+    <div class="box table-box">
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'tab1')">Date wise</button>
+            <button class="tab-btn" onclick="openTab(event, 'tab2')">Subject Wise</button>
+        </div>
+
+        <div id="tab1" class="tab-content active">
+            <div class="row">
+                <div class="col-5 col-md-6">
+                    <div class="input-group">
+                        <div class="input-labels">
+                            <label for="startDate">From</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input-field" type="date" id="startDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 col-md-6">
+                    <div class="input-group">
+                        <div class="input-labels">
+                            <label for="endDate">To</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input-field" type="date" id="endDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 col-md-12 text-center">
+                    <button class="small-btn hide-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                            <path d="M21 21l-6 -6" />
+                        </svg>
+                    </button>
+                    <div class="input-group hide-lg">
+                        <button name="submit" class="cursor-lg">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><span class="half-bgtext">Date:</span></th>
+                            <th><span class="half-bgtext">Lecture:</span></th>
+                            <th><span class="half-bgtext">Type:</span></th>
+                            <th><span class="half-bgtext">Subject:</span></th>
+                            <th><span class="half-bgtext">Status:</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>04-Apr-2024</td>
+                            <td class="text-center">1</td>
+                            <td>ELECTIVE</td>
+                            <td>BASIC ELECTRONICS ENGINEERING (LAB)</td>
+                            <td>Present</td>
+                        </tr>
+                        <tr>
+                            <td>04-Apr-2024</td>
+                            <td class="text-center">5</td>
+                            <td>MAJOR</td>
+                            <td>COMPUTER BASICS & C PROGRAMMING</td>
+                            <td>Absent</td>
+                        </tr>
+                        <tr>
+                            <td>03-Apr-2024</td>
+                            <td class="text-center">1</td>
+                            <td>MAJOR</td>
+                            <td>COMPUTER BASICS & C PROGRAMMING</td>
+                            <td>Absent</td>
+                        </tr>
+                        <tr>
+                            <td>03-Apr-2024</td>
+                            <td class="text-center">2</td>
+                            <td>ELECTIVE</td>
+                            <td>ENGINEERING CHEMISTRY</td>
+                            <td>Present</td>
+                        </tr>
+                        <tr>
+                            <td>03-Apr-2024</td>
+                            <td class="text-center">5</td>
+                            <td>ELECTIVE</td>
+                            <td>ENGINEERING CHEMISTRY (LAB)</td>
+                            <td>Present</td>
+                        </tr>
+                        <tr>
+                            <td>03-Apr-2024</td>
+                            <td class="text-center">6</td>
+                            <td>ELECTIVE</td>
+                            <td>ENGINEERING CHEMISTRY (LAB)</td>
+                            <td>Present</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="tab2" class="tab-content">
+            <div class="row">
+                <div class="col-3 col-md-6">
+                    <div class="input-group">
+                        <div class="input-labels">
+                            <label for="startDate">From</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input-field" type="date" id="startDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6">
+                    <div class="input-group">
+                        <div class="input-labels">
+                            <label for="endDate">To</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input-field" type="date" id="endDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-12">
+                    <div class="select-dropdown">
+                        <div class="input-group select-group">
+                            <div class="input-labels">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="input-wrapper select-input-box">
+                                <input class="input-field" type="text" id="subject" placeholder="Select" readonly>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <input type="radio" name="drop1" id="id11" class="radio" />
+                            <label for="id11">
+                                <span class="name">ENGINEERING MATHEMATICS-II</span>
+                            </label>
+
+                            <input type="radio" name="drop1" id="id12" class="radio" />
+                            <label for="id12">
+                                <span class="name">ENGINEERING CHEMISTRY</span>
+                            </label>
+
+                            <input type="radio" name="drop1" id="id13" class="radio" />
+                            <label for="id13">
+                                <span class="name">ENGINEERING CHEMISTRY (LAB)</span>
+                            </label>
+
+                            <input type="radio" name="drop1" id="id14" class="radio" />
+                            <label for="id14">
+                                <span class="name">COMPUTER BASICS & C PROGRAMMING</span>
+                            </label>
+
+                            <input type="radio" name="drop1" id="id15" class="radio" />
+                            <label for="id15">
+                                <span class="name">COMPUTER BASICS & C PROGRAMMING (LAB)</span>
+                            </label>
+
+                            <input type="radio" name="drop1" id="id16" class="radio" />
+                            <label for="id16">
+                                <span class="name">DEEP READING</span>
+                            </label>
+
+                            <input type="radio" name="drop1" id="id17" class="radio" />
+                            <label for="id17">
+                                <span class="name">LPBEI –I</span>
+                            </label>
+
+                            <input type="radio" name="drop1" id="id18" class="radio" />
+                            <label for="id18">
+                                <span class="name">BASIC ELECTRONICS ENGINEERING</span>
+                            </label>
+
+                            <input type="radio" name="drop1" id="id19" class="radio" />
+                            <label for="id19">
+                                <span class="name">BASIC ELECTRONICS ENGINEERING (LAB)</span>
+                            </label>
+
+                            <input type="radio" name="drop1" id="id20" class="radio" />
+                            <label for="id20">
+                                <span class="name">WORKSHOP PRACTICE (LAB)</span>
+                            </label>
+
+                            <input type="radio" name="drop1" id="id21" class="radio" />
+                            <label for="id21">
+                                <span class="name">ENGLISH COMMUNICATION-II</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 col-md-12 text-center">
+                    <button class="small-btn hide-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                            <path d="M21 21l-6 -6" />
+                        </svg>
+                    </button>
+                    <div class="input-group hide-lg">
+                        <button name="submit" class="cursor-lg w-100">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="hoverable-table">
+                    <thead>
+                        <tr>
+                            <th>Subject:</th>
+                            <th>Code:</th>
+                            <th>Present:</th>
+                            <th>Absent:</th>
+                            <th>Percentage:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ENGINEERING MATHEMATICS-II</td>
+                            <td>EAS211</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">75%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="disclaimer-msg">Note: In case of incorrect accuracy of the data above contact
+            your
+            Coordinator</p>
+    </div>
+</div>
