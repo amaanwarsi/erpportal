@@ -599,6 +599,10 @@ section {
     align-self: flex-start;
 }
 
+.content-right {
+    align-self: flex-end;
+}
+
 .hero h5,
 .hero h6 {
     color: #666;
@@ -627,15 +631,22 @@ section {
 .hero p {
     font-family: "Raleway", sans-serif;
     text-transform: capitalize;
-    color: rgb(0, 0, 0, .89);
+    color: rgb(0, 0, 0, .9);
     line-height: 1.6;
     font-size: 1.5rem;
     letter-spacing: 1.1px;
 }
 
 .screenshots {
-    align-self: end;
     height: 95%;
+}
+
+.screenshots-left {
+    align-self: end;
+}
+
+.screenshots-right {
+    align-self: start;
 }
 
 .cta {
