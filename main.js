@@ -3,12 +3,12 @@ const idInput = document.querySelector("#txtUserid");
 const showPassBtn = document.querySelector("#showPass");
 const loginBtn = document.querySelector("#ImgBttn_Login");
 
-document.querySelectorAll(".input-group").forEach((element) => {
-  var inputField = element.querySelector(".input-field");
-  element.addEventListener("click", () => {
-    inputField.focus();
-  });
-});
+// document.querySelectorAll(".input-group").forEach((element) => {
+//   var inputField = element.querySelector(".input-field");
+//   element.addEventListener("click", () => {
+//     element.querySelector(".input-field").focus();
+//   });
+// });
 
 showPassBtn.addEventListener("click", function () {
   showPassBtn.innerHTML = "";
@@ -70,4 +70,9 @@ loginBtn.addEventListener("click", function (e) {
       this.classList.remove("loader");
     }, 10000);
   }
+
+  if (passInput.value == "12345" && idInput.value == "demo") {
+    window.location.href = './home.html';
+  }
+
 });

@@ -4,225 +4,693 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="/tmu-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./login.css">
+    <title>ERP Portal - TMU</title>
+    <link rel="shortcut icon" href="./tmu-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.min.css">
     <link rel="stylesheet" href="./normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=family=Kanit&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-
-
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <div class="menu">
-                <img src="/472_title_image.png" alt="Logo">
-                <nav>
-                    <ul>
-                        <li><a href="#!">Home</a></li>
-                        <li><a href="#!">News</a></li>
-                        <li><a href="#!">Feedback</a></li>
-                    </ul>
-                </nav>
+        <div class="nav shadow">
+            <img src="./tmu-logo.png" alt="Logo" class="logo cursor" height="50">
+            <button class="hide-lg menu-toggle">Menu
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 9l6 6l6 -6" />
+                </svg>
+            </button>
+            <div class="dropdown">
+                <div class="user-profile" id="dropbtn"
+                    style="background-image: url('./assets/img/christian-buehner-DItYlc26zVI-unsplash.jpg');"></div>
+                <button class="bg-border-none hide">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hide-md" width="27" height="27" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+                        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hide-lg" width="25" height="25" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M19 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M19 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    </svg>
+                </button>
+                <div id="myDropdown" class="dropdown-content hide shadow ">
+                    <a href="#!" id="toggleTheme">Toggle Theme</a>
+                    <a href="#!">Change Password</a>
+                    <a href="#!">Logout</a>
+                </div>
             </div>
         </div>
     </header>
-    <main>
-        <section>
-            <div class="container">
-                <div class="hero">
-                    <div class="content">
-                        <div class="content-left">
-                            <h5>welcome to</h5>
-                            <h1>TMU <span>iZone</span></h1>
-                            <h6>Login Student and Faculty</h6>
-                            <div class="cta">
-                                <button class="btn btn-dark" role="button">General</button>
-                                <button class="btn btn-light" role="button">Medical</button>
+
+    <main id="home">
+        <div class="sidebar shadow hide-md">
+            <button class="hide-lg menu-toggle">Menu
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 15l6 -6l6 6" />
+                </svg>
+            </button>
+            <h3><span class="hide-md half-bg-text">Menu</span></h3>
+            <div class="search-group">
+                <div class="input-group">
+                    <div class="input-wrapper search-input">
+                        <input class="input-field" placeholder="Search..." type="text" id="search-input">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M21 21l-6 -6" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li class="active">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z" />
+                            <path d="M10 16h6" />
+                            <path d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M4 8h3" />
+                            <path d="M4 12h3" />
+                            <path d="M4 16h3" />
+                        </svg>
+                    </span>
+                    <a href="">Profile</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                            <path d="M7 15v2" />
+                            <path d="M10 11v6" />
+                            <path d="M13 13v4" />
+                        </svg>
+                    </span>
+                    <a href="">Attendance</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                            <path d="M15 8h-6h1a3 3 0 0 1 0 6h-1l3 3" />
+                            <path d="M9 11h6" />
+                        </svg>
+                    </span>
+                    <a href="">Fees</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                            <path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                            <path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                            <path d="M14 7l6 0" />
+                            <path d="M17 4l0 6" />
+                        </svg>
+                    </span>
+                    <a href="">Time Table</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                            <path d="M16 3l0 4" />
+                            <path d="M8 3l0 4" />
+                            <path d="M4 11l16 0" />
+                            <path d="M8 15h2v2h-2z" />
+                        </svg>
+                    </span>
+                    <a href="">Events</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                            <path d="M7 3v4h4" />
+                            <path d="M9 17l0 4" />
+                            <path d="M17 14l0 7" />
+                            <path d="M13 13l0 8" />
+                            <path d="M21 12l0 9" />
+                        </svg>
+                    </span>
+                    <a href="">Assignments</a>
+                </li>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M13 12v.01" />
+                            <path d="M3 21h18" />
+                            <path d="M5 21v-16a2 2 0 0 1 2 -2h7.5m2.5 10.5v7.5" />
+                            <path d="M14 7h7m-3 -3l3 3l-3 3" />
+                        </svg>
+                    </span><a href="">Grievances</a>
+                </li>
+                <li class="accordion-toggle">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M20 17v-12c0 -1.121 -.879 -2 -2 -2s-2 .879 -2 2v12l2 2l2 -2z" />
+                            <path d="M16 7h4" />
+                            <path d="M18 19h-13a2 2 0 1 1 0 -4h4a2 2 0 1 0 0 -4h-3" />
+                        </svg>
+                    </span>
+                    <a href="#!">Examination</a>
+                </li>
+                <div class="accordion-panel hide">
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="#!">Internal Datesheet</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">External Datesheet</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Form Main</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Form Reappear</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Form Status</a>
+                    </li>
+                </div>
+                <li class="accordion-toggle">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M17.8 19.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+                            <path
+                                d="M6.2 19.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+                            <path
+                                d="M12 9.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+                        </svg>
+                    </span>
+                    <a href="#!">Faculty</a>
+                </li>
+                <div class="accordion-panel hide">
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Current</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Sat. Survey</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Syllabus Feedback</a>
+                    </li>
+                </div>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                            <path d="M9 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M15 8l2 0" />
+                            <path d="M15 12l2 0" />
+                            <path d="M7 16l10 0" />
+                        </svg>
+                    </span>
+                    <a href="">Admit Card</a>
+                </li>
+                <li class="accordion-toggle">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                            <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                            <path d="M9 17v-4" />
+                            <path d="M12 17v-1" />
+                            <path d="M15 17v-2" />
+                            <path d="M12 17v-1" />
+                        </svg>
+                    </span>
+                    <a href="#!">Result</a>
+                </li>
+                <div class="accordion-panel hide">
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Internal Result</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Online Result</a>
+                    </li>
+                </div>
+                <li class="accordion-toggle">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" />
+                            <path d="M9 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" />
+                            <path d="M5 8h4" />
+                            <path d="M9 16h4" />
+                            <path
+                                d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041z" />
+                            <path d="M14 9l4 -1" />
+                            <path d="M16 16l3.923 -.98" />
+                        </svg>
+                    </span>
+                    <a href="#!">Library</a>
+                </li>
+                <div class="accordion-panel hide">
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Library Login</a>
+                    </li>
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">Remote Access</a>
+                    </li>
+                </div>
+                <li class="accordion-toggle">
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 9m-6 0a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" />
+                            <path d="M12 15l3.4 5.89l1.598 -3.233l3.598 .232l-3.4 -5.889" />
+                            <path d="M6.802 12l-3.4 5.89l3.598 -.233l1.598 3.232l3.4 -5.889" />
+                        </svg>
+                    </span>
+                    <a href="#!">Placement</a>
+                </li>
+                <div class="accordion-panel hide">
+                    <li class="accordion">
+                        <span class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                                    stroke-width="0" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <a href="">CRC Form</a>
+                    </li>
+                </div>
+                <li>
+                    <span class="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                            <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                            <path d="M5 21h14" />
+                            <path d="M5 18h14" />
+                            <path d="M5 15h14" />
+                        </svg>
+                    </span>
+                    <a href="">Registration</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container-fluid">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-6 col-md-12">
+                        <div class="box profile-card">
+                            <img src="./assets/img/christian-buehner-DItYlc26zVI-unsplash.jpg" alt="" srcset="">
+                            <h3>John Doe</h3>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="email">Email.</label>
+                                        </div>
+                                        <div class="input-wrapper border-0">
+                                            <input class="input-field" value="johndoe@example.com" type="email"
+                                                name="email" id="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="mobile">Mobile</label>
+                                        </div>
+                                        <div class="input-wrapper border-0">
+                                            <input class="input-field" value="9876543210" type="number" name="mobile"
+                                                id="mobile">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="city">City</label>
+                                        </div>
+                                        <div class="input-wrapper border-0">
+                                            <input class="input-field" value="Pune" type="text" name="city" id="city">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <div class="input-labels">
+                                            <label for="address">Address</label>
+                                        </div>
+                                        <div class="input-wrapper border-0">
+                                            <input class="input-field" value="A-103, Civil lines" type="text"
+                                                name="address" id="address">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="content">
-                        <img src="./assets/img/Humaaans - Sitting.png" alt="" srcset="">
-                    </div>
-                </div>
-        </section>
-
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="bg-shape shape-2" width="50" height="50" viewBox="0 0 68 66"
-            version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">
-            <path
-                d="M41 3h20a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H41a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM4 42h20a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V44a2 2 0 0 1 2-2zm49.728-3.008 14 24C68.505 64.326 67.544 66 66 66H38c-1.544 0-2.505-1.674-1.728-3.008l14-24c.772-1.323 2.684-1.323 3.456 0zM15 0c8.284 0 15 6.716 15 15s-6.716 15-15 15S0 23.284 0 15 6.716 0 15 0z"
-                fill="#f2f2f2"></path>
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="bg-shape shape-1" width="80" height="80" viewBox="0 0 200 200"
-            version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">
-            <path fill="rgba(228, 173, 112, 1)" fill-rule="evenodd"
-                d="M199.06 140.014c.545 5.496-3.985 9.986-9.508 9.986h-36.25c-5.523 0-9.882-4.537-11.129-9.917-4.492-19.385-21.869-33.833-42.62-33.833-20.752 0-38.13 14.448-42.622 33.833-1.247 5.38-5.606 9.917-11.129 9.917H9.552C4.03 150-.5 145.51.045 140.014 5.055 89.474 47.694 50 99.552 50c51.858 0 94.497 39.474 99.508 90.014Z"
-                clip-rule="evenodd"></path>
-        </svg>
-
-        <section>
-            <div class="container">
-                <div class="hero">
-                    <div class="content">
-                        <div class="content-left">
-                            <h6>Beautiful and Intuitive UI </h6>
-                            <h2>Designed for an Exceptional User Experience</h2>
-                            <p>We understand that in today's fast-paced academic environment, every second counts.
-                                That's why our student portal is optimized for speed and reliability. With
-                                lightning-fast load times and seamless transitions between pages, you can access the
-                                information you need without any frustrating delays. Our commitment to performance
-                                ensures that your academic experience is smooth and uninterrupted.</p>
+                    <div class="col-6 col-md-12">
+                        <div class="page-container">
+                            <div class="box">
+                                <h3 class="heading text-left">Personal</h3>
+                                <div class="row">
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="Userid">Enrollment no.</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="TCA2309023" type="text" name="Userid"
+                                                    id="Userid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="stnumber">Student number</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="ST/######" type="text" name="stnumber"
+                                                    id="stnumber">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="ABCid">ABC ID</label>
+                                                <a href="#!">Generate ABC ID</a>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="5503872752855" type="number"
+                                                    name="ABCid" id="ABCid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="name">Name</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="John Doe" type="text" name="name"
+                                                    id="name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="DOB">DOB</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="2050-08-30" type="date" name="DOB"
+                                                    id="DOB">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="category">Category</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="OBC" type="text" name="category"
+                                                    id="category">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="fathername">Father Name</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="Michael Doe" type="text"
+                                                    name="fathername" id="fathername">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="mothername">Mother Name</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="Catherine Doe" type="text" name="name"
+                                                    id="mothername">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="Mentor">Mentor</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="Omar Ahmed Al-Farsi" type="text"
+                                                    name="Mentor" id="Mentor">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="course">Course</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="B.Tech-001" type="text" name="course"
+                                                    id="course">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="section">Section</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="A" type="text" name="section"
+                                                    id="section">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="semester">Semester</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="II" type="text" name="semester"
+                                                    id="semester">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-labels">
+                                                <label for="batch">Batch</label>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <input class="input-field" value="2023-2024" type="text" name="batch"
+                                                    id="batch">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="content">
-                        <img src="./Untitled design.png" class="screenshots screenshots-left" alt="" srcset="">
-                    </div>
-                </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="hero">
-                    <div class="content">
-                        <img src="./Untitled design.png" class="screenshots screenshots-right" alt="" srcset="">
-                    </div>
-                    <div class="content">
-                        <div class="content-right">
-                            <h6>Beautiful and Intuitive UI </h6>
-                            <h2>Designed for an Exceptional User Experience</h2>
-                            <p>We understand that in today's fast-paced academic environment, every second counts.
-                                That's why our student portal is optimized for speed and reliability. With
-                                lightning-fast load times and seamless transitions between pages, you can access the
-                                information you need without any frustrating delays. Our commitment to performance
-                                ensures that your academic experience is smooth and uninterrupted.</p>
+                    <div class="col-12">
+                        <div class="box shadow">
+                            <div class="input-group">
+                                <button name="submit" class="cursor-lg" id="submit">Submit Details</button>
+                            </div>
                         </div>
-                    </div>
-                </div>
-        </section>
-
-
-        <div class="gallery">
-            <div class="image-item"><img src="./assets/img/campusgarden.jpg" alt="Image 1"></div>
-            <div class="image-item"><img src="./assets/img/gravitas.jpg" alt="Image 2"></div>
-            <div class="image-item"><img src="./assets/img/finearts.jpg" alt="Image 3"></div>
-            <div class="image-item"><img src="./assets/img/mrimachine.jpg" alt="Image 4"></div>
-            <div class="image-item"><img src="./assets/img/nursingbuilding.jpg" alt="Image 5"></div>
-            <div class="image-item"><img src="./assets/img/painting.jpg" alt="Image 6"></div>
-            <div class="image-item"><img src="./assets/img/rainlandscape.jpg" alt="Image 7"></div>
-            <div class="image-item"><img src="./assets/img/courtroom.jpg" alt="Image 8"></div>
-        </div>
-        </div>
-
-
-
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>admissions</h4>
-                    <ul>
-                        <li><a href="#">TMU Scholarship</a></li>
-                        <li><a href="#">Education Loan</a></li>
-                        <li><a href="#">Hostel & Transport</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>student corner</h4>
-                    <ul>
-                        <li><a href="#">Student Clubs</a></li>
-                        <li><a href="#">Placement Portal</a></li>
-                        <li><a href="#">Disciplinary Rules</a></li>
-                        <li><a href="#">Alumni Portal</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>quick links</h4>
-                    <ul>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Feedback</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+    </main>
+    <footer>
+
     </footer>
 
-    <!-- 
-    <div class="gallery-container">
-        <div class="thumbnails"></div>
-        <div class="slides">
-            <div><img src="https://picsum.photos/id/1067/540/720"></div>
-            <div><img src="https://picsum.photos/id/122/540/720"></div>
-            <div><img src="https://picsum.photos/id/188/540/720"></div>
-            <div><img src="https://picsum.photos/id/249/540/720"></div>
-            <div><img src="https://picsum.photos/id/257/540/720"></div>
-            <div><img src="https://picsum.photos/id/259/540/720"></div>
-            <div><img src="https://picsum.photos/id/283/540/720"></div>
-            <div><img src="https://picsum.photos/id/288/540/720"></div>
-            <div><img src="https://picsum.photos/id/299/540/720"></div>
-        </div>
-    </div>
- -->
-
-
-    <script>
-
-
-        const slideGallery = document.querySelector('.slides');
-        const slides = slideGallery.querySelectorAll('div');
-        const thumbnailContainer = document.querySelector('.thumbnails');
-        const slideCount = slides.length;
-        const slideWidth = 540;
-
-        const highlightThumbnail = () => {
-            thumbnailContainer
-                .querySelectorAll('div.highlighted')
-                .forEach(el => el.classList.remove('highlighted'));
-            const index = Math.floor(slideGallery.scrollLeft / slideWidth);
-            thumbnailContainer
-                .querySelector(`div[data-id="${index}"]`)
-                .classList.add('highlighted');
-        };
-
-        const scrollToElement = el => {
-            const index = parseInt(el.dataset.id, 10);
-            slideGallery.scrollTo(index * slideWidth, 0);
-        };
-
-        thumbnailContainer.innerHTML += [...slides]
-            .map((slide, i) => `<div data-id="${i}"></div>`)
-            .join('');
-
-        thumbnailContainer.querySelectorAll('div').forEach(el => {
-            el.addEventListener('click', () => scrollToElement(el));
-        });
-
-        slideGallery.addEventListener('scroll', e => highlightThumbnail());
-
-        highlightThumbnail();
-
-    </script>
-
+    <script src="./utility.js"></script>
 </body>
 
 </html>
